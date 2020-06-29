@@ -1,9 +1,10 @@
 language: c
 sudo: true
 before_install:
-  - apt-get -y install libncurses-dev
+  - sudo apt-get -y install libncursesw-dev
 script:
-  - CFLAGS="-coverage -O0" make test
+  - CFLAGS="-coverage -O0" make
+  - sudo CFLAGS="-coverage -O0" make test
   - find -name "*.c" -exec gcov \{\} \;
 after_success:
   - bash <(curl -s https://codecov.io/bash)
