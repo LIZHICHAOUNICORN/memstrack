@@ -1,7 +1,8 @@
 language: c
 sudo: true
 script:
-  - CFLAGS="-coverage -O0" gcov make test
+  - CFLAGS="-coverage -O0" make test
+  - find -name "*.c" -exec gcov \{\} \;
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
