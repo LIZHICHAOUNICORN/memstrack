@@ -1,7 +1,7 @@
 language: c
 sudo: true
 before_install:
-  - sudo apt-get -y install libncursesw-dev
+  - sudo apt-get -y install libncurses-dev
 script:
   - CFLAGS="-coverage -O0" make
   - sudo CFLAGS="-coverage -O0" make test
