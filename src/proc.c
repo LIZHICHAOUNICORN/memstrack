@@ -167,7 +167,7 @@ int parse_zone_info(struct zone_info **zone)
 		(*zone)->node = node;
 		strncpy((*zone)->name, zone_name, ZONENAMELEN);
 
-		log_debug("Trying to parse node %d zone %s\n", node, zone_name, (*zone)->start_pfn, (*zone)->spanned);
+		log_debug("Trying to parse node %d zone %s\n", node, zone_name);
 
 		if (
 			parse_keyword(1, file, line, "free", "Node", "free %lu", &(*zone)->free) ||

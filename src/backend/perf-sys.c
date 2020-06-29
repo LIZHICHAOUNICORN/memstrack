@@ -128,6 +128,7 @@ int perf_do_load_event_info(struct PerfEvent *event)
 	}
 
 	/* Parse in order name, ID, format */
+	// TODO: check ret of fgets
 	fgets(fmt_buffer, 1024, fmt_file);
 	val = strstr(fmt_buffer, "name: ") + 6;
 	if (val) {
