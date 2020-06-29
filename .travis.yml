@@ -1,0 +1,7 @@
+language: c
+sudo: true
+script:
+  - CFLAGS="-coverage -O0" gcov make test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
