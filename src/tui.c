@@ -19,6 +19,7 @@
 
 #define _GNU_SOURCE
 #include <stdio.h>
+#include <stdint.h>
 #include <unistd.h>
 #include <errno.h>
 #include <malloc.h>
